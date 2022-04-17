@@ -3,7 +3,7 @@
 # Entity-Relationship Diagram
 
 <a href="https://app.gleek.io/diagrams/bO-mhoW6Qf20e-n9KsmjrA" target="_blank">
-    <img src="https://sketchertest.blob.core.windows.net/previewimages/bO-mhoW6Qf20e-n9KsmjrA.png" alt="New Diagram" title="New Diagram" />
+    <img src="https://sketchertest.blob.core.windows.net/previewimages/bO-mhoW6Qf20e-n9KsmjrA.png" alt="FIAP - Persistence" title="FIAP - Persistence" />
 </a>
 <p>Created with <a href="https://gleek.io">Gleek.io diagram maker </a></p>
 
