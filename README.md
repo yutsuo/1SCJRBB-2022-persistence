@@ -1,5 +1,20 @@
 # 1SCJRBB-2022-persistence
 
+# Montando e Rodando, ôe
+
+Pré-requisitos:
+
+- Tenha o Docker instalado e funcionando. Se vira.
+- Precisa do docker-compose também.
+
+> \> Baixa o repositório
+> \> Navega até ele em algum prompt
+> \> `docker-compose up`
+> \> ????
+> \> PROFIT!
+
+Eu acabei fazendo em MySQL e MongoDB, fica aí pra consulta e/ou referência. O docker-compose vai subir os dois bancos e montar os databases, tabelas e dados mockados pra ficar mais fácil de brincar com o Spring JPA depois.
+
 # Entity-Relationship Diagram
 
 <a href="https://app.gleek.io/diagrams/bO-mhoW6Qf20e-n9KsmjrA" target="_blank">
@@ -49,3 +64,13 @@ Bom trabalho a todos!
 Prof. Rafael Matsuyama
 
 ### PS: Copia nós não, plz.
+
+# Nósquipe
+
+Carlos Mateus Borges Junior - RM344974
+
+Daniel de Oliveira Carvalho - RM344795
+
+Pedro Sant Anna Lima Oliveira - RM344804
+
+Willian Prestes Correia Cellos - RM344812
