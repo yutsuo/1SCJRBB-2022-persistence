@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+
 @RestController
 
 public class CustomerController {
@@ -16,6 +18,17 @@ public class CustomerController {
     public String saveCustomer(@RequestBody Customer customer) {
         repo.save(customer);
         return "Customer added successfully";
+    }
+
+    @GetMapping("/findAllCustomers")
+    public List<Customer> getCustomers() {
+        return repo.findAll();
+    }
+
+    @DeleteMapping("/delete/{id}")
+    public String deleteCustomer(@PathVariable int id){
+        repo.deleteById(id);
+        return "Customer Deleted Successfully";
     }
     
 }
