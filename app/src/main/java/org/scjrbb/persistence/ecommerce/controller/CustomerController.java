@@ -1,34 +1,42 @@
 package org.scjrbb.persistence.ecommerce.controller;
 
-import org.scjrbb.persistence.ecommerce.model.Customer;
-import org.scjrbb.persistence.ecommerce.repository.CustomerRepo;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
-// import com.fasterxml.jackson.annotation.JsonTypeInfo.Id;
+import org.scjrbb.persistence.ecommerce.model.Customer;
+import org.scjrbb.persistence.ecommerce.repository.CustomerRepository;
 
 @RestController
 
 public class CustomerController {
+
     @Autowired
-    private CustomerRepo repo;
+    private CustomerRepository customerRepository;
 
-    @PostMapping("/addCustomer")
-    public String saveCustomer(@RequestBody Customer customer) {
-        repo.save(customer);
-        return "Customer added successfully";
+    @GetMapping("/allCustomers")
+    public List<Customer> getAllCustomers() {
+        return customerRepository.findAll();
     }
 
-    @GetMapping("/findAllCustomers")
-    public List<Customer> getCustomers() {
-        return repo.findAll();
+    @GetMapping("/customer/{id}")
+    public Optional<Customer> getCustomer(@PathVariable String id) {
+        return customerRepository.findById(id);
     }
 
-    @DeleteMapping("/delete/{id}")
-    public String deleteCustomer(@PathVariable int id){
-        repo.deleteById(id);
-        return "Customer Deleted Successfully";
+    @PostMapping("/customer")
+    public String addCustomer(@RequestBody Customer customer) {
+        customerRepository.save(customer);
+        return "Customer Added to Database. No, really.";
     }
-    
+
+    @DeleteMapping("/customer/{id}")
+    public String removeCustomer(@PathVariable String id) {
+        customerRepository.deleteById(id);
+        return "I deleted this Customer. Yep. It's done. Too late now.";
+    }
+
+
 }
