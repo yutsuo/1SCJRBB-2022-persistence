@@ -1,15 +1,7 @@
 package org.scjrbb.persistence.ecommerce.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
-
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 
 @Document(collection = "Customer")
 public class Customer {
@@ -18,6 +10,7 @@ public class Customer {
     private String name;
     private String phone;
     private String email;
+    // private List<Endereco> enderecos;
 
     public Customer() {
     }
@@ -28,7 +21,6 @@ public class Customer {
         this.phone = phone;
         this.email = email;
     }
-
 
     public String getId() {
         return this.id;
