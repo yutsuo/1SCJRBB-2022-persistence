@@ -1,4 +1,10 @@
 services:
+  app:
+    build: .
+    restart: always
+    ports:
+      - 8989:8989
+
   mysql:
     container_name: mysql
     image: mysql:latest
@@ -30,11 +36,11 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=root
 
-  seed:
-    container_name: seed
-    build: .
-    links:
-      - mongodb
+  # seed:
+  #   container_name: seed
+  #   build: .
+  #   links:
+  #     - mongodb
 
   mongo-express:
     image: mongo-express:latest

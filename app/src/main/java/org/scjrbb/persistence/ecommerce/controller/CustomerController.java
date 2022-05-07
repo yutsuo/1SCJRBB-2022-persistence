@@ -10,7 +10,6 @@ import org.scjrbb.persistence.ecommerce.model.Customer;
 import org.scjrbb.persistence.ecommerce.repository.CustomerRepository;
 
 @RestController
-
 public class CustomerController {
 
     @Autowired
@@ -37,6 +36,5 @@ public class CustomerController {
         customerRepository.deleteById(id);
         return "I deleted this Customer. Yep. It's done. Too late now.";
     }
-
 
 }
