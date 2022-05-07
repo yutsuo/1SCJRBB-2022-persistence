@@ -1,6 +1,6 @@
 # 1SCJRBB-2022-persistence
 
-# Montando e Rodando, ôe
+## Montando e Rodando, ôe
 
 Pré-requisitos:
 
@@ -8,35 +8,27 @@ Pré-requisitos:
 - JAVA 17
 - MAVEN: 3.8.5
 
-
 > \> Clonar o repositório
 > \> Navega até ele em algum prompt
 > \> RUN -> 'mvn clean install'
 > \> RUN docker-compose up --build
 
-
 Eu acabei fazendo em MySQL e MongoDB, fica aí pra consulta e/ou referência. O docker-compose vai subir os dois bancos e montar os databases, tabelas e dados mockados pra ficar mais fácil de brincar com o Spring JPA depois.
 
-# Entity-Relationship Diagram
+## Entity-Relationship Diagram
 
-<a href="https://app.gleek.io/diagrams/bO-mhoW6Qf20e-n9KsmjrA" target="_blank">
-    <img src="./gleek-bO-mhoW6Qf20e-n9KsmjrA.png" alt="FIAP - Persistence" title="FIAP - Persistence" />
-</a>
-<p>Created with <a href="https://gleek.io">Gleek.io diagram maker </a></p>
+[![alt text](./gleek-bO-mhoW6Qf20e-n9KsmjrA.png "FIAP - Persistence")](https://app.gleek.io/diagrams/bO-mhoW6Qf20e-n9KsmjrA)
 
+Created with [Gleek.io](https://gleek.io) diagram maker
 
-Trata-se de um sistema de cadastro de produtos e pedidos em um portal de e-commerce. 
+Trata-se de um sistema de cadastro de produtos e pedidos em um portal de e-commerce.
 
 Considere os requisitos:
 
 > O portal possui vários produtos em estoque e com uma determinada quantidade em estoque de cada um desses produtos.
-
 > Cada pedido possui um ou mais produtos e um cliente associado a esse pedido.
-
 > Um produto pode aparecer em um ou mais pedidos.
-
 > Cada produto possui um código, um nome, uma quantidade e um valor.
-
 > Cada cliente possui seus dados pessoais e dados de entrega.
 
 Com base nestes requisitos:
@@ -53,11 +45,9 @@ d. Cassandra (em outro projeto separado, lembrando que o Cassandra não suporta 
 e. Elaboração de Dockerfile ou Docker Compose referente a dois bancos de dados utilizados na disciplina, envolvendo o processo de clonagem de um repo até a disponibilização do ambiente (nesse caso basta construir um projeto básico para provar o conceito).
 
 6. Documentar e justificar a escolha das técnicas, assim como as decisões técnicas e de arquiteturas do sistema.
- 
+
 > O trabalho pode ser realizado em grupos de até 6 pessoas.
-
 > Compactar o projeto completo (ou colocar o link do repo no Github) e disponibilizá-lo no portal da Fiap até a data estipulada.
-
 > Entregar, junto com o projeto, um documento descrevendo todos os passos desenvolvidos ao longo da elaboração do projeto, incluindo o modelo do banco de dados, funcionalidade, etc.
 
 Trabalhos iguais serão anulados!
@@ -65,9 +55,9 @@ Trabalhos iguais serão anulados!
 Bom trabalho a todos!
 Prof. Rafael Matsuyama
 
-### PS: Copia nós não, plz.
+## PS: Copia nós não, plz
 
-# Nósquipe
+## Nósquipe
 
 Carlos Mateus Borges Junior - RM344974
 
