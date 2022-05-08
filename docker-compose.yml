@@ -1,6 +1,10 @@
 services:
   app:
-    build: .
+    build: 
+      context: .
+      dockerfile: Dockerfile.maven
+    depends_on:
+      - mongodb
     restart: always
     ports:
       - 8989:8989
@@ -21,10 +25,11 @@ services:
       - "3306:3306"
       - "33060:33060"
 
-  adminer:
-    image: adminer:latest
-    ports:
-      - 8080:8080
+  # adminer:
+  #   image: adminer:latest
+  #   depends_on: mysql
+  #   ports:
+  #     - 8080:8080
 
   mongodb:
     image: mongo:latest
@@ -36,27 +41,30 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=root
       - MONGO_INITDB_ROOT_PASSWORD=root
 
-  # seed:
-  #   container_name: seed
-  #   build: .
-  #   links:
-  #     - mongodb
-
-  mongo-express:
-    image: mongo-express:latest
-    depends_on:
-      - mongodb
-    restart: unless-stopped
-    ports:
-      - "8081:8081"
+  seed:
+    container_name: seed
+    build: 
+      context: .
+      dockerfile: Dockerfile.mongo
     links:
       - mongodb
-    environment:
-      - ME_CONFIG_BASICAUTH_USERNAME=root
-      - ME_CONFIG_BASICAUTH_PASSWORD=root
-      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
-      - ME_CONFIG_MONGODB_ADMINPASSWORD=root
-      - ME_CONFIG_MONGODB_SERVER=mongodb
-      - ME_CONFIG_MONGODB_PORT=27017
-      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
-      - ME_CONFIG_OPTIONS_EDITORTHEME=default
+
+  # mongo-express:
+  #   image: mongo-express:latest
+  #   depends_on:
+  #     - mongodb
+  #   restart: unless-stopped
+  #   ports:
+  #     - "8081:8081"
+  #   links:
+  #     - mongodb
+  #   environment:
+  #     - ME_CONFIG_BASICAUTH_USERNAME=root
+  #     - ME_CONFIG_BASICAUTH_PASSWORD=root
+  #     - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+  #     - ME_CONFIG_MONGODB_ADMINPASSWORD=root
+  #     - ME_CONFIG_MONGODB_SERVER=mongodb
+  #     - ME_CONFIG_MONGODB_PORT=27017
+  #     - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+  #     - ME_CONFIG_OPTIONS_EDITORTHEME=default
+  

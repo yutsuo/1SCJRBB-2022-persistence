@@ -2,16 +2,12 @@
 
 ## Montando e Rodando, ôe
 
-Pré-requisitos:
+Pré-requisito:
 
 - Docker
-- JAVA 17
-- MAVEN: 3.8.5
 
 > \> Clonar o repositório
-> \> Navega até ele em algum prompt
-> \> RUN -> 'mvn clean install'
-> \> RUN docker-compose up --build
+> \> RUN docker-compose up
 
 Eu acabei fazendo em MySQL e MongoDB, fica aí pra consulta e/ou referência. O docker-compose vai subir os dois bancos e montar os databases, tabelas e dados mockados pra ficar mais fácil de brincar com o Spring JPA depois.
 
