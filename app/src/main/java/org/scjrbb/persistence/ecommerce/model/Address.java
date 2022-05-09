@@ -1,6 +1,6 @@
-package org.scjrbb.persistence.ecommerce.repository;
+package org.scjrbb.persistence.ecommerce.model;
 
-public class Endereco {
+public class Address {
 
     private Integer id;
     private String rua;

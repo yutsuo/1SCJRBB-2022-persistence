@@ -2,7 +2,6 @@ package org.scjrbb.persistence.ecommerce.model;
 
 import java.util.List;
 
-import org.scjrbb.persistence.ecommerce.repository.Endereco;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -13,7 +12,7 @@ public class Customer {
     private String name;
     private String phone;
     private String email;
-    private List<Endereco> enderecos;
+    private List<Address> address;
 
     public Customer() {
     }
@@ -57,12 +56,12 @@ public class Customer {
         this.email = email;
     }
 
-    public List<Endereco> getEnderecos() {
-        return enderecos;
+    public List<Address> getAddress() {
+        return address;
     }
 
-    public void setEnderecos(List<Endereco> enderecos) {
-        this.enderecos = enderecos;
+    public void setAddress(List<Address> address) {
+        this.address = address;
     }
 
 }
