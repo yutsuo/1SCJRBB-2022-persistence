@@ -7,6 +7,7 @@ Pré-requisito:
 - Docker
 
 > \> Clonar o repositório
+
 > \> RUN docker-compose up
 
 O docker-compose vai subir os bancos de dados e montar os databases, tabelas e dados mockados, baixar as dependências do maven, compilar o projeto e executar a aplicação.
@@ -15,9 +16,9 @@ Optamos pelo MongoDB por estarmos mais familiarizados com esse banco NoSQL. É m
 
 Para o Modelo de Entidade-Relacionamento optamos desenhamos o mínimo possível para efetuar uma compra, ignorando métodos de pagamento, seguindo  o enunciado e mantendo a simplicidade para garantir a entrega de um MVP funcional. Usamos o [Gleek.io](https://gleek.io) para o desenho.
 
-Para o projeto java usamos um criador de boilerplate para projetos Spring chamado [Spring Initializr](https://start.spring.io/) para reduzirmos o overhead de código mínimo necessário, minimizando o overhead de código produtivo.
+Na definição do projeto java usamos um criador de boilerplate para projetos Spring chamado [Spring Initializr](https://start.spring.io/) para reduzirmos o overhead de código mínimo necessário, minimizando o overhead de código produtivo.
 
-Para dependências optamos pelo maven, por familiaridade. 
+Em termos de dependências escolhemos o maven, por familiaridade. 
 
 
 ## Entity-Relationship Diagram
