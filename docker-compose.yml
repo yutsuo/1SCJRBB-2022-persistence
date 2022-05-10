@@ -1,13 +1,13 @@
 services:
-  app:
-    build: 
-      context: .
-      dockerfile: Dockerfile.maven
-    depends_on:
-      - mongodb
-    restart: always
-    ports:
-      - 8989:8989
+  # app:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.maven
+  #   depends_on:
+  #     - mongodb
+  #   restart: always
+  #   ports:
+  #     - 8989:8989
 
   mysql:
     container_name: mysql

@@ -9,13 +9,24 @@ Pré-requisito:
 > \> Clonar o repositório
 > \> RUN docker-compose up
 
-Eu acabei fazendo em MySQL e MongoDB, fica aí pra consulta e/ou referência. O docker-compose vai subir os dois bancos e montar os databases, tabelas e dados mockados pra ficar mais fácil de brincar com o Spring JPA depois.
+O docker-compose vai subir os bancos de dados e montar os databases, tabelas e dados mockados, baixar as dependências do maven, compilar o projeto e executar a aplicação.
+
+Optamos pelo MongoDB por estarmos mais familiarizados com esse banco NoSQL. É mais fácil de manipular documentos do que tabelas relacionais. A aplicação foi planejada para ser usada via requisições http (REST API), compatível com aplicações web, que são padrão hoje em dia, fazendo mais sentido em um projeto de ecommerce.
+
+Para o Modelo de Entidade-Relacionamento optamos desenhamos o mínimo possível para efetuar uma compra, ignorando métodos de pagamento, seguindo  o enunciado e mantendo a simplicidade para garantir a entrega de um MVP funcional. Usamos o [Gleek.io](https://gleek.io) para o desenho.
+
+Para o projeto java usamos um criador de boilerplate para projetos Spring chamado [Spring Initializr](https://start.spring.io/) para reduzirmos o overhead de código mínimo necessário, minimizando o overhead de código produtivo.
+
+Para dependências optamos pelo maven, por familiaridade. 
+
 
 ## Entity-Relationship Diagram
 
 [![alt text](./gleek-bO-mhoW6Qf20e-n9KsmjrA.png "FIAP - Persistence")](https://app.gleek.io/diagrams/bO-mhoW6Qf20e-n9KsmjrA)
 
 Created with [Gleek.io](https://gleek.io) diagram maker
+
+## Enunciado da Avaliação
 
 Trata-se de um sistema de cadastro de produtos e pedidos em um portal de e-commerce.
 
