@@ -1,9 +1,13 @@
 package org.scjrbb.persistence.ecommerce.controller;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
+import org.scjrbb.persistence.ecommerce.model.Address;
 import org.scjrbb.persistence.ecommerce.model.Customer;
 import org.scjrbb.persistence.ecommerce.model.Order;
+import org.scjrbb.persistence.ecommerce.model.OrderCustomer;
 import org.scjrbb.persistence.ecommerce.model.dto.OrderDto;
 import org.scjrbb.persistence.ecommerce.repository.CustomerRepository;
 import org.scjrbb.persistence.ecommerce.repository.OrderRepository;
@@ -30,7 +34,17 @@ public class OrderController {
 
         Optional<Customer> customer = customerRepository.findById(orderDto.getClientID());
         if (customer != null) {
-            order.setCustomer(customer.get());
+            OrderCustomer orderCustomer = new OrderCustomer(customer.get());
+            order.setOrderCustomer(orderCustomer);
+
+            List<Address> enderecos = customer.get().getAddress();
+            for (Address ad : enderecos) {
+                if (ad.getId() == orderDto.getAdressId()) {
+                    order.setDeliveryAddress(ad);
+                    break;
+                }
+            }
+
         } else {
             throw new Error("Não foi possivel adicionar a venda cliente inexitente");
         }

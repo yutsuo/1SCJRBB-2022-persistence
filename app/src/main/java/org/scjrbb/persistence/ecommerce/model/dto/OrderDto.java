@@ -2,11 +2,9 @@ package org.scjrbb.persistence.ecommerce.model.dto;
 
 import java.util.List;
 
-import org.scjrbb.persistence.ecommerce.model.Address;
-
 public class OrderDto {
     private String clientID;
-    private Address deliveryAddress;
+    private Integer adressId;
     private List<Object> orderItens;
 
     public String getClientID() {
@@ -17,12 +15,12 @@ public class OrderDto {
         this.clientID = clientID;
     }
 
-    public Address getDeliveryAddress() {
-        return deliveryAddress;
+    public Integer getAdressId() {
+        return adressId;
     }
 
-    public void setDeliveryAddress(Address deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
+    public void setAdressId(Integer adressId) {
+        this.adressId = adressId;
     }
 
     public List<Object> getOrderItens() {

@@ -6,7 +6,7 @@ import java.util.List;
 public class Order {
 
     private String id;
-    private Customer customer;
+    private OrderCustomer orderCustomer;
     private Address deliveryAddress;
     private List<Product> products;
     private Date date;
@@ -20,12 +20,12 @@ public class Order {
         this.id = id;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public OrderCustomer getOrderCustomer() {
+        return orderCustomer;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setOrderCustomer(OrderCustomer orderCustomer) {
+        this.orderCustomer = orderCustomer;
     }
 
     public Address getDeliveryAddress() {
