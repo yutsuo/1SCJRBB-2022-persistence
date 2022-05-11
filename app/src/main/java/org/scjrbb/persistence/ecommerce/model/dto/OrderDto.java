@@ -5,7 +5,7 @@ import java.util.List;
 public class OrderDto {
     private String clientID;
     private Integer adressId;
-    private List<Object> orderItens;
+    private List<OrderProductDto> orderItens;
 
     public String getClientID() {
         return clientID;
@@ -23,11 +23,11 @@ public class OrderDto {
         this.adressId = adressId;
     }
 
-    public List<Object> getOrderItens() {
+    public List<OrderProductDto> getOrderItens() {
         return orderItens;
     }
 
-    public void setOrderItens(List<Object> orderItens) {
+    public void setOrderItens(List<OrderProductDto> orderItens) {
         this.orderItens = orderItens;
     }
 }
