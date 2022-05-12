@@ -14,6 +14,8 @@ O docker-compose vai subir os bancos de dados e montar os databases, tabelas e d
 
 Optamos pelo MongoDB por estarmos mais familiarizados com esse banco NoSQL. É mais fácil de manipular documentos do que tabelas relacionais. A aplicação foi planejada para ser usada via requisições http (REST API), compatível com aplicações web, que são padrão hoje em dia, fazendo mais sentido em um projeto de ecommerce.
 
+Criamos ainda o mesmo banco de dados com a mesma estrutura de dados em MySQL como prova de conceito.
+
 Para o Modelo de Entidade-Relacionamento optamos desenhamos o mínimo possível para efetuar uma compra, ignorando métodos de pagamento, seguindo  o enunciado e mantendo a simplicidade para garantir a entrega de um MVP funcional. Usamos o [Gleek.io](https://gleek.io) para o desenho.
 
 Na definição do projeto java usamos um criador de boilerplate para projetos Spring chamado [Spring Initializr](https://start.spring.io/) para reduzirmos o overhead de código mínimo necessário, minimizando o overhead de código produtivo.
