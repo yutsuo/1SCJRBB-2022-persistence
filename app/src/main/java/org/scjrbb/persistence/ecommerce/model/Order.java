@@ -1,22 +1,23 @@
 package org.scjrbb.persistence.ecommerce.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
 public class Order {
 
-    private String id;
+    private Integer id;
     private OrderCustomer orderCustomer;
     private Address deliveryAddress;
     private List<Product> products;
-    private Date date;
+    private LocalDate date;
     private Double totalValue;
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -44,12 +45,12 @@ public class Order {
         this.products = products;
     }
 
-    public Date getDate() {
+    public LocalDate getDate() {
         return date;
     }
 
     public void setDate() {
-        this.date = new Date();
+        this.date = LocalDate.now();
     }
 
     public Double getTotalValue() {

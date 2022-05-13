@@ -1,6 +1,7 @@
 package org.scjrbb.persistence.ecommerce.controller;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -32,6 +33,8 @@ public class OrderController {
         // Recebo uma dto da ordem e tenho que transformar num objeto ordem;
         Order order = new Order();
 
+        order.setId(orderDto.getId());
+
         Optional<Customer> customer = customerRepository.findById(orderDto.getClientID());
         if (customer != null) {
             OrderCustomer orderCustomer = new OrderCustomer(customer.get());
@@ -49,8 +52,12 @@ public class OrderController {
             throw new Error("Não foi possivel adicionar a venda cliente inexitente");
         }
 
+        order.setDate();
+
+
+
         return order;
-        // pegar o codigo do cliente e adicionar o objeto cliente na ordem
+    
 
         // productRepository.save(product);
 

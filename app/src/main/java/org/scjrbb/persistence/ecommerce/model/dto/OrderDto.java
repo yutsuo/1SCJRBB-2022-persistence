@@ -3,9 +3,18 @@ package org.scjrbb.persistence.ecommerce.model.dto;
 import java.util.List;
 
 public class OrderDto {
+    private Integer id;
     private String clientID;
     private Integer adressId;
     private List<OrderProductDto> orderItens;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getClientID() {
         return clientID;
