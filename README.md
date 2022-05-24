@@ -5,10 +5,13 @@
 Pré-requisito:
 
 - Docker
+- Postman
 
 > \> Clonar o repositório
 
 > \> RUN docker-compose up
+
+> \> Importar no Postman a collection loja.postman_collection para auxiliar no uso do aplicativo
 
 O docker-compose vai subir os bancos de dados e montar os databases, tabelas e dados mockados, baixar as dependências do maven, compilar o projeto e executar a aplicação.
 
