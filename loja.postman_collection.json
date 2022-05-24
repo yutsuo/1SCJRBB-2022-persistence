@@ -1,0 +1,235 @@
+{
+	"info": {
+		"_postman_id": "33508adf-8e7a-4e66-9bc3-ded2171b1851",
+		"name": "loja",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Busca Venda por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/order/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todas as Vendas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "inserir Venda",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 1,\r\n\t\"clientID\" : 1,\r\n\t\"adressId\":1,\r\n\t\"orderItens\": [\r\n\t\t{ \r\n\t\t\t\"productId\": 1,\r\n\t\t\t\"amount\": 5 \r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8989/order",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"order"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Produtos",
+			"item": [
+				{
+					"name": "Busca todos os Produtos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/allProducts",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"allProducts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca Produto pelo ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deleta um Produto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/product/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"product",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir um produto",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 1,\r\n\t\"name\": \"disquete\",\r\n\t\"description\": \"disquete reliquia nunca usado\",\r\n\t\"price\": 100.00,\r\n\t\"stock\": 12\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8989/product",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clientes",
+			"item": [
+				{
+					"name": "Busca cliente por ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/customer/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Busca todos os clientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8989/allCustomers",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"allCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Inserir Cliente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"id\": 1,\r\n\t\"name\": \"Pedro Teste\",\r\n\t\"phone\": \"61 99999-9999\",\r\n\t\"email\": \"pedro@bb.com.br\",\r\n\t\"address\": [\r\n\t\t{\r\n\t\t\t\"id\": \"1\",\r\n\t\t\t\"rua\": \"Qc 01 rua a\",\r\n\t\t\t\"numero\": \"s/n\",\r\n\t\t\t\"complemento\": \"AP 12\",\r\n\t\t\t\"bairro\": \"jd mangueiral\",\r\n\t\t\t\"cidade\": \"Brasilia\",\r\n\t\t\t\"estado\": \"distrito federal\",\r\n\t\t\t\"cep\": \"09780-540\"\r\n\t\t},\r\n\t\t\t{\r\n\t\t\t\"id\": \"2\",\r\n\t\t\t\"rua\": \"Rua abc\",\r\n\t\t\t\"numero\": \"1\",\r\n\t\t\t\"complemento\": \"-\",\r\n\t\t\t\"bairro\": \"ipiranga\",\r\n\t\t\t\"cidade\": \"São Paulo\",\r\n\t\t\t\"estado\": \"São Paulo\",\r\n\t\t\t\"cep\": \"09520-631\"\r\n\t\t}\r\n\t]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8989/customer",
+							"host": [
+								"localhost"
+							],
+							"port": "8989",
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
